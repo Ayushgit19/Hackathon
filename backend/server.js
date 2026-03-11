@@ -21,7 +21,7 @@ const expireEvents = async () => {
 const startServer = async () => {
   try {
     await connectDB();  // Wait for DB connection before continuing
-    const allowedOrigins = ["http://localhost:5173", "https://hackathon-frontend-chi-one.vercel.app/"]
+    const allowedOrigins = ["http://localhost:5173", "https://hackathon-frontend-chi-one.vercel.app"]
     app.use(express.json())
     app.use(cookieParser())
     app.use(cors({
