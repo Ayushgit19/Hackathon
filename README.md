@@ -1,13 +1,9 @@
-# 🧘 Serenity - Wellness Session Management Platform
-
-A comprehensive full-stack wellness application where users can create, manage, and participate in yoga and meditation sessions. Built with modern technologies including React, Vite, Node.js, Express, and MongoDB.
+# Event Management Platform
 
 ## 🌟 Features
 
 ### 🎯 Core Functionality
-- **Session Management**: Create, save, and publish wellness sessions
-- **Timer Integration**: Built-in session timers with progress tracking
-- **Category Filtering**: Organize sessions by type (Yoga, Meditation) and difficulty
+- **Session Management**: Create, save, and publish events
 - **Draft System**: Save sessions as drafts before publishing
 - **User Authentication**: Secure JWT-based authentication system
 
@@ -70,10 +66,6 @@ A comprehensive full-stack wellness application where users can create, manage, 
    JWT_SECRET=your_jwt_secret_key
    NODE_ENV=development
    
-   # Email Configuration (Optional - for password reset)
-   SMTP_USER=your_smtp_username
-   SMTP_PASS=your_smtp_password
-   SENDER_EMAIL=your_email@example.com
    ```
 
    Start the backend server:
@@ -104,7 +96,7 @@ A comprehensive full-stack wellness application where users can create, manage, 
 ## 📁 Project Structure
 
 ```
-serenity/
+Event-Management/
 ├── backend/                 # Backend API server
 │   ├── configs/            # Database and other configurations
 │   ├── controllers/        # Route controllers
@@ -175,8 +167,8 @@ serenity/
 ## 📸 Application Pages
 
 - **Dashboard** - View and filter published sessions
-- **Create Session** - Create new wellness sessions
-- **My Sessions** - Manage your published sessions
+- **Create Events** - Create new wellness sessions
+- **My Events** - Manage your published sessions
 - **Edit Draft** - Edit session drafts
 - **Authentication** - Login, register, email verification, password reset
 
@@ -208,6 +200,3 @@ For questions, suggestions, or support, please reach out:
 - **LinkedIn**: [Ayush Kumar](https://www.linkedin.com/in/ayush-kumar-494736288/)
 - **GitHub**: [ayushgit19](https://github.com/ayushgit19)
 
----
-
-Made with ❤️ by [Ayush Kumar](https://github.com/ayushgit19)
