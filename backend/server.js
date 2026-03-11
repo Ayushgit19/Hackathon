@@ -6,9 +6,17 @@ import connectDB from "./configs/db.js";
 import authRouter from "./routes/authRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import sessionRouter from "./routes/sessionRoutes.js";
+import Event from "./models/Event.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const expireEvents = async () => {
+  await Event.updateMany(
+    { date: { $lt: new Date() }, status: "published" },
+    { $set: { status: "completed" } }
+  );
+};
 
 const startServer = async () => {
   try {
@@ -27,6 +35,8 @@ const startServer = async () => {
     app.use('/api/user', userRouter)
     app.use('/api', sessionRouter)
 
+    await expireEvents();
+    setInterval(() => expireEvents().catch(console.error), 10 * 60 * 1000);
 
     app.listen(PORT, () => {
       console.log(` Server running on port ${PORT}`);
