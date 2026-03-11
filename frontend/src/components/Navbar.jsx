@@ -84,7 +84,7 @@ const Navbar = () => {
             "/create-session"
           )}`}
         >
-          Create Session
+          Create Event
         </button>}
 
         {userData ? (
