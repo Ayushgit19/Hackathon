@@ -30,16 +30,16 @@ const CreateMsg = () => {
           <div className="flex items-center gap-2 mb-2">
             <IoSparklesOutline className="text-2xl text-yellow-300 animate-bounce" />
             <span className="text-white/90 text-sm">
-              Create something beautiful
+              Create memorable events and bring people together.
             </span>
           </div>
 
           <div className="flex flex-col">
             <span className="text-white font-bold text-2xl mb-1">
-              Design Your Wellness Session
+              Design events and turn ideas into experiences.
             </span>
             <span className="text-white/80 text-sm max-w-[90%]">
-              Share your knowledge and help others on their wellness journey
+              Share your passion and create unforgettable moments.
             </span>
           </div>
         </div>

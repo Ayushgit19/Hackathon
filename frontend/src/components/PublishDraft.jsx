@@ -8,20 +8,11 @@ const PublishDraft = () => {
   const {
     sessionTitle,
     description,
-    duration,
-    category,
-    difficulty,
-    selectedImage,
-    instructions,
     addDraft,
     addSession,
     setSessionTitle,
     setDescription,
-    setDuration,
-    setCategory,
-    setDifficulty,
     setSelectedImage,
-    setInstructions,
   } = useContext(SessionContext);
 
 
@@ -29,11 +20,7 @@ const PublishDraft = () => {
   const clearForm = () => {
     setSessionTitle("");
     setDescription("");
-    setDuration("10");
-    setCategory("Meditation");
-    setDifficulty("Beginner");
     setSelectedImage(0);
-    setInstructions([{ id: 1, text: "" }]);
   };
 
   const handleSaveDraft = () => {
@@ -43,24 +30,22 @@ const PublishDraft = () => {
     }
 
     addDraft(); 
-    toast.success("Session saved as draft");
+    toast.success("Event saved as draft");
     clearForm();
   };
 
   const handlePublish = () => {
     if (
       !sessionTitle ||
-      !description ||
-      !instructions.length ||
-      !instructions[0].text
+      !description
     ) {
-      toast.error("Please complete the session before publishing");
+      toast.error("Please complete the Event before publishing");
       return;
     }
 
     addSession();
 
-    toast.success("Session published successfully!");
+    toast.success("Event published successfully!");
     clearForm();
   };
 
@@ -79,7 +64,7 @@ const PublishDraft = () => {
         className="flex items-center justify-center gap-1 text-white text-xs font-semibold px-3 py-2 rounded-md cursor-pointer hover:opacity-90 bg-gradient-to-r from-[#9090e8] to-[#bc7be8] mb-3 transition-all"
       >
         <Upload className="w-4 h-4" />
-        Publish Session
+        Publish Event
       </button>
 
       <div className="bg-blue-400/20 flex items-center justify-center p-2 rounded-md border-1 border-blue-400/30">

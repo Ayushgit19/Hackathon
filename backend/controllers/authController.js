@@ -34,40 +34,6 @@ export const register = async (req, res) => {
             maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
         });
 
-        //Sending welcome email
-        // const mailOptions = {
-        //     from: process.env.SENDER_EMAIL,
-        //     to: email,
-        //     subject: 'Welcome to Serenity',
-        //     html: `
-        //             <div style="font-family: Arial, sans-serif; color: #333;">
-        //             <h2 style="color: #5712E0;">🌿 Welcome to Serenity, ${user.name}!</h2>
-        //             <p>We're so glad you're here.</p>
-                    
-        //             <p><strong>Serenity</strong> is your personal space for:</p>
-        //             <ul>
-        //                 <li>🧘 Mindful sessions</li>
-        //                 <li>💫 Healing practices</li>
-        //                 <li>🌱 Personal growth</li>
-        //             </ul>
-
-        //             <p>Your journey to wellness begins now. Start by exploring your 
-        //                 <a href="https://serenity-ve74.vercel.app" style="color: #D9239F; text-decoration: none;">Dashboard</a> and creating your first session!</p>
-
-        //             <p>If you have any questions or need help, feel free to reply to this email.</p>
-
-        //             <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;" />
-
-        //             <p style="font-size: 13px; color: #888;">With gratitude,<br/>The Serenity Team</p>
-        //             <p style="font-size: 13px;">
-        //                 <a href="https://serenity-ve74.vercel.app" style="color: #5712E0;">serenity.example.com</a>
-        //             </p>
-        //             </div>
-        //         `,
-
-        // }
-
-        // await transporter.sendMail(mailOptions)
 
         return res.json({
             success: true,

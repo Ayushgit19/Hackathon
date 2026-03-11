@@ -57,20 +57,8 @@ const Hero = () => {
               Good morning, {userData ? userData.name : "Username"}
             </h1>
             <p className="text-white/70 text-sm mt-1 max-w-[60%]">
-              Ready to continue your wellness journey? Discover new sessions or
-              continue where you left off.
+              Ready to explore exciting events? Discover upcoming experiences or continue planning your next event.
             </p>
-          </div>
-
-          <div className="flex items-center text-xs gap-4">
-            <div className="flex items-center gap-2">
-              <FaRegHeart className="text-red-300" />
-              <p className="text-white">{totalSessions.toString()}</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaArrowTrendUp className="text-green-400" />
-              <p className="text-white">Your Practice Growing</p>
-            </div>
           </div>
         </div>
 

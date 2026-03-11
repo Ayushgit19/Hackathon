@@ -24,11 +24,7 @@ const YogaCard = ({
   const navigate = useNavigate();
 
   const handleStartClick = () => {
-    if (_id) {
-      navigate(`/published/${_id}`);
-    } else {
-      console.error("Session ID is undefined");
-    }
+
   };
 
   return (
@@ -61,9 +57,8 @@ const YogaCard = ({
                 "linear-gradient(72deg, rgba(92, 64, 214, 1) 3%, rgba(178, 35, 217, 1) 100%)",
             }}
           >
-            <FaPlay className="text-xs" />
             <span onClick={handleStartClick} className="text-sm font-semibold">
-              Start
+              Register
             </span>
           </button>
         </div>

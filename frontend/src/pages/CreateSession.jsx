@@ -17,7 +17,6 @@ const CreateSession = () => {
             {" "}
             <SessionDetails />
             <SessionImage />
-            <Instructions />
           </div>
 
           <div className="flex flex-col gap-4 w-[300px] shrink-0">

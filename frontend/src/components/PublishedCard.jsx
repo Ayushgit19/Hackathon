@@ -16,28 +16,10 @@ const PublishedCard = ({ session }) => {
   const handleDelete = () => {
     if (window.confirm("Are you sure you want to delete this session?")) {
       deleteSession(session._id); 
-      toast.success("Session deleted successfully");
+      toast.success("Event deleted successfully");
     }
   };
 
-  const getDisplayTags = () => {
-    const tags = [];
-    if (session.category) {
-      tags.push({
-        text: session.category.toLowerCase(),
-        color: "bg-blue-100 text-blue-700",
-      });
-    }
-    if (session.difficulty) {
-      tags.push({
-        text: session.difficulty.toLowerCase(),
-        color: "bg-green-100 text-green-700",
-      });
-    }
-    return tags;
-  };
-
-  const displayTags = getDisplayTags();
 
   const formatDate = (dateString) => {
     if (!dateString) return "Today";
@@ -67,25 +49,6 @@ const PublishedCard = ({ session }) => {
         </div>
       </div>
 
-      {/* Tags */}
-      {displayTags.length > 0 && (
-        <div className="flex gap-2 mb-4">
-          {displayTags.map((tag, index) => (
-            <span
-              key={index}
-              className={`text-xs font-medium px-2 py-1 rounded-md ${tag.color}`}
-            >
-              {tag.text}
-            </span>
-          ))}
-        </div>
-      )}
-
-      {/* Duration */}
-      <div className="flex items-center gap-1 text-gray-500 mb-4">
-        <Clock className="w-3 h-3" />
-        <span className="text-xs">{session.duration || "10"} min</span>
-      </div>
 
       {/* Action Buttons */}
       <div className="flex gap-2 mb-3">

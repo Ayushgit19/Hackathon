@@ -62,8 +62,8 @@ const Navbar = () => {
           <RiFlowerLine className="h-10 w-10 text-black" />
         </div>
         <div className="flex flex-col">
-          <span className="font-semibold text-xl text-gray-900">Serenity</span>
-          <span className="text-xs text-gray-500">Wellness Sessions</span>
+          <span className="font-semibold text-xl text-gray-900">Eventify</span>
+          <span className="text-xs text-gray-500">Plan and host amazing events</span>
         </div>
       </div>
 

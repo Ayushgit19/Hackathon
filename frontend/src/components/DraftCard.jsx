@@ -36,7 +36,7 @@ const DraftCard = ({ draft }) => {
 
   // Publish the draft
   const handlePublish = () => {
-    if (!draft.title || !draft.description || !draft.instructions?.length) {
+    if (!draft.title || !draft.description) {
       toast.error("Please complete the session before publishing");
       return;
     }
@@ -44,11 +44,7 @@ const DraftCard = ({ draft }) => {
     const sessionData = {
       title: draft.title,
       description: draft.description,
-      duration: draft.duration,
-      category: draft.category,
-      difficulty: draft.difficulty,
       selectedImage: draft.selectedImage,
-      instructions: draft.instructions,
       lastEdited: Date.now(),
     };
 
@@ -96,25 +92,6 @@ const DraftCard = ({ draft }) => {
         </div>
       </div>
 
-      {/* Tags */}
-      {displayTags.length > 0 && (
-        <div className="flex gap-2 mb-4">
-          {displayTags.map((tag, index) => (
-            <span
-              key={index}
-              className={`text-xs font-medium px-2 py-1 rounded-md ${tag.color}`}
-            >
-              {tag.text}
-            </span>
-          ))}
-        </div>
-      )}
-
-      {/* Duration */}
-      <div className="flex items-center gap-1 text-gray-500 mb-4">
-        <Clock className="w-3 h-3" />
-        <span className="text-xs">{draft.duration || "10"} min</span>
-      </div>
 
       {/* Action buttons */}
       <div className="flex gap-2 mb-3">

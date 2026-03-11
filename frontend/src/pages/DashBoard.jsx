@@ -14,7 +14,7 @@ import { AppContext } from "../context/AppContext.jsx";
 import { imageOptions } from "../assets/assets";
 
 const DashBoard = () => {
-  const [activeTab, setActiveTab] = useState("All Sessions");
+  const [activeTab, setActiveTab] = useState("All Events");
   const [allPublishedSessions, setAllPublishedSessions] = useState([]);
   const { drafts, userSessions } = useContext(SessionContext);
   const { backendUrl } = useContext(AppContext);

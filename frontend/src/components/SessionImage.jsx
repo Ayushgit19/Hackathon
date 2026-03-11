@@ -17,7 +17,7 @@ const SessionImage = () => {
             <Image className="w-5 h-5 text-white" />
           </div>
           {/* Section title */}
-          <span className="font-medium text-xs">Session Image</span>
+          <span className="font-medium text-xs">Event Image</span>
         </div>
         {/* Subtitle */}
         <span className="text-xs text-black/60">
